@@ -1,0 +1,36 @@
+<mat-toolbar color="primary" class="mat-elevation-z4 app-toolbar" >
+  <span class="spacer"></span>
+  <button mat-mini-fab color="primary" *ngIf="authenticated$ | async;">
+    <mat-icon>add</mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-progress-bar *ngIf="loading$ | async" class="tasks-progress app-progress-bar" color="accent" mode="indeterminate"></mat-progress-bar>
+
+  <div class="app-content">
+    <ng-template #notAuthenticated>
+      <mdv20-login></mdv20-login>
+    </ng-template>
+
+    <div *ngIf="authenticated$ | async; else notAuthenticated">
+      <div class="container">
+        <div class="col-6">
+          <mdv20-list
+            [data]="phones$ | async"
+            [selected]="phone$ | async"
+            (selectPhone)="selectPhone($event)"
+          ></mdv20-list>
+        </div>
+        <div class="col-6">
+          <mdv20-form
+            [selected]="phone$ | async"
+            (savePhone)="savePhone($event)"
+            (deletePhone)="deletePhone($event)"
+            (cancel)="reset()"
+          ></mdv20-form>
+        </div>
+      </div>
+    </div>
+  </div>
+</mat-sidenav-container>

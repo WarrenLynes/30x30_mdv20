@@ -10,5 +10,25 @@
     "tslint.json": "*",
     "nx.json": "*"
   },
-  "projects": {}
+  "projects": {
+    "material": {
+      "tags": []
+    },
+    "ui": {
+      "tags": []
+    },
+    "core-state": {
+      "tags": []
+    },
+    "core-data": {
+      "tags": []
+    },
+    "phones": {
+      "tags": []
+    },
+    "phones-e2e": {
+      "tags": [],
+      "implicitDependencies": ["phones"]
+    }
+  }
 }

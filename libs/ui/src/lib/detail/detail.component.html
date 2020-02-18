@@ -1,0 +1,14 @@
+
+
+<div class="container">
+    <button mat-stroked-button routerLink="/"> back </button>
+    <mat-divider></mat-divider>
+  <div class="col-12">
+    <mat-card>
+      <mat-card-title>{{(phone$ | async)?.title}}</mat-card-title>
+      <mat-card-content>
+        <p>{{(phone$ | async)?.details}}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

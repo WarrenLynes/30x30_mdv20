@@ -182,21 +182,17 @@ mat-card:not(.dashboard-card) {
   }
 }
 
-mat-list-item:not(:first-of-type) {
-  border-top: 1px solid #efefef;
-}
-
 mat-form-field {
   width: 100%;
 }
 
 mat-list-item:hover {
   cursor: pointer;
-  background: #0b0b0b;
+  background: #202020;
 }
 
 mat-list-item:not(:first-of-type) {
-  border-top: 1px solid #efefef;
+  border-top: 1px solid #202020;
 }
 
 .symbol {

@@ -10,12 +10,15 @@
       <mat-card-content>
 
         <mat-form-field class="full-width">
+          <mat-label>email</mat-label>
           <input matInput placeholder="Email" formControlName="email" type="email" name="email">
+          <mat-hint>victor@avila.com</mat-hint>
           <mat-error *ngIf="loginForm.controls['email'].hasError('required')">Email is required</mat-error>
           <mat-error *ngIf="loginForm.controls['email'].hasError('email')">Email must be valid</mat-error>
         </mat-form-field>
 
         <mat-form-field class="full-width">
+          <mat-label>name</mat-label>
           <input matInput placeholder="Name" formControlName="name" type="text" name="name">
           <mat-error *ngIf="loginForm.controls['name'].hasError('required')">Name is required</mat-error>
           <mat-error *ngIf="loginForm.controls['name'].hasError('minLength')">Name must be 3 chars long</mat-error>
@@ -23,6 +26,7 @@
         </mat-form-field>
 
         <mat-form-field class="full-width">
+          <mat-label>password</mat-label>
           <input matInput placeholder="Password" formControlName="password" type="text" name="password">
           <mat-error *ngIf="loginForm.controls['password'].hasError('required')">Password is required</mat-error>
           <mat-error *ngIf="loginForm.controls['password'].hasError('minLength')">Password must be 8 chars long</mat-error>

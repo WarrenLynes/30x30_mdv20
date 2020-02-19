@@ -1,8 +1,6 @@
 <mat-toolbar color="primary" class="mat-elevation-z4 app-toolbar" >
   <span class="spacer"></span>
-  <button mat-mini-fab color="primary" *ngIf="authenticated$ | async;">
-    <mat-icon>add</mat-icon>
-  </button>
+  <button mat-stroked-button color="primary" *ngIf="authenticated$ | async;" (click)="onLogout()"> logout </button>
 </mat-toolbar>
 
 <mat-sidenav-container>

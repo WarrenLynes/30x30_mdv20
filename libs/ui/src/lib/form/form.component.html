@@ -7,6 +7,7 @@
     <mat-card-content>
 
       <mat-form-field class="full-width d-flex">
+        <mat-label>title</mat-label>
         <input matInput placeholder="title" type="text" name="title" formControlName="title">
         <mat-error *ngIf="form.get('title').hasError('required')">Required</mat-error>
       </mat-form-field>

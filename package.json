@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "deploy": "ng build --prod && cp ./dist/apps/phones/index.html ./dist/apps/phones/200.html && surge ./dist/apps/phones/ https://shays3043020.surge.sh",
     "ng": "ng",
     "nx": "nx",
     "start": "ng serve",
